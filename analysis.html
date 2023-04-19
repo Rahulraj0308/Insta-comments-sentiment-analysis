@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <h1>Hello Results Page!</h1>
+    <p>{{ output }}</p>
+   
+<img src='my_plot.png'/>
+    </ul>
+    <h1>Hello Plotly (but not Dash)</h1>
+  <div id='chart' class='chart'”></div>
+  </body>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{graphJSON | safe}};
+  Plotly.plot('chart',graphs,{});
+</script>
+</html>
